@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Homepage</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link href="images/favicon.png" rel="icon">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+   <!-- Css Files -->
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <div class="row mx-0">
+      <!--Main Section -->
+      <div class="col-md-9 px-0">
+         <div class="main-section">
+            <!--overview Section  -->
+            <div class="row overview mx-0">
+               <div class="col-md-2  overview-text">Overview</div>
+               <div class="col-md-3 overview-col">
+                  <img src="images/time.svg" />
+                  <h6>
+                     <span>Total Duration</span>
+                     <br>23 Minutes
+                  </h6>
+               </div>
+               <div class="col-md-3 overview-col">
+                  <img src="images/coordinates.svg" />
+                  <h6>
+                     <span>Coordinates</span>
+                     <br>765 Latlng
+                  </h6>
+               </div>
+               <div class="col-md-3 overview-col">
+                  <img src="images/estimated.svg" />
+                  <h6>
+                     <span>Estimated</span>
+                     <br>72%
+                     <span>
+                        <img src="images/vector.svg" style="float: none;margin-top: 0;" />
+                     </span>
+                  </h6>
+               </div>
+            </div>
+            <!-- overview End Section -->
+            <!--Table Section -->
+            <table class="table table-dark table-striped" id="datalisting" style="width:100%">
+               
+               <thead>
+                  <tr>
+                     <th>
+                        <label class="containe">
+                           <input type="checkbox">
+                           <span class="checkmark-3">
+                           </span>
+                        </label>
+                     </th>
+                     <th>Index</th>
+                     <th>Timestamp <img src="images/ic_sort.svg" class="timestap">
+                    
+                     </th>
+                     <th>Latitude</th>
+                     <th>Latitude</th>
+                     <th>GPS Time</th>
+                     <th>Output</th>
+                     <th>Status</th>
+                     <th>Action</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>1</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td class="completed">Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>2</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td class="completed">Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>3</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td class="completed">Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>4</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td class="completed">Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>5</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>6</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>7</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>8</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>9</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>10</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>11</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>12</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>
+                        <label class="contain">
+                           <input type="checkbox">
+                           <span class="checkmark-2">
+                           </span>
+                        </label>
+                     </td>
+                     <td>13</td>
+                     <td>00:01:39</td>
+                     <td>21.4234234</td>
+                     <td>21.4234234</td>
+                     <td>12:00:12</td>
+                     <td>F:B:L:R</td>
+                     <td>Completed</td>
+                     <td>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+
+            
+            <!--Table End Section-->
+
+
+         </div>
+      </div>
+      <!-- End Main Section  -->
+
+      <!--Sidebar Section -->
+      <div class="col-md-3 px-0 right-sidebar">
+         <div class="section-second pt-0">
+            <!-- Header -->
+            <div class="sidebar-header">
+               <div class="logo">
+                  <a href="#">
+                     <img src="images/logo.svg" /><span>KML</span>
+                  </a>
+               </div>
+            </div>
+            <!--End Header -->
+
+            <!-- Classic tabs -->
+            <div class="sidebar-nav">
+               <ul>
+                  <li class="active"><a><img src="images/map-icon.svg" alt="Map" /><span>Map</span></a></li>
+                  <li><a><img src="images/listing-icon.svg" alt="Listing" /><span>Listing</span></a></li>
+                  <li><a><img src="images/export-icon.svg" alt="Data" /><span>Data</span></a>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="source">
+               <h6>Source</h6>
+               <div class="input-group search">
+                  <input class="form-control file-input" />
+
+                  <button type="button" class="btn import">
+                     Import
+                  </button>
+                  <button type="button" class="btn setting">
+                  </button>
+               </div>
+            </div>
+            <!--Accordion wrapper-->
+            <div class="accordion md-accordion" id="accordion1" role="tablist" aria-multiselectable="true">
+
+               <!-- Accordion card -->
+               <div class="card">
+
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingOne1">
+                     <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="true"
+                        aria-controls="collapseOne1">
+                        <h5 class="mb-0">
+                           Capture Directions
+                        </h5>
+                     </a>
+                  </div>
+
+                  <!-- Card body -->
+                  <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                     data-parent="#accordion1">
+                     <div class="card-body">
+
+                        <div class="input-group checkbox-group">
+                           <label class="cont">Front
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont">Back
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont">Panaroma
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Left
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Right
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <div class="accordion md-accordion" id="accordion2" role="tablist" aria-multiselectable="true">
+               <!-- Accordion card -->
+
+               <!-- Accordion card -->
+               <div class="card">
+
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingTwo2">
+                     <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="true"
+                        aria-controls="collapseTwo2">
+                        <h5 class="mb-0">
+                           KML Output
+                        </h5>
+                     </a>
+                  </div>
+                  <!-- Card body -->
+                  <div id="collapseTwo2" class="collapse show" role="tabpanel" aria-labelledby="headingTwo2"
+                     data-parent="#accordion2">
+                     <div class="card-body">
+                        <div class="input-group checkbox-group">
+                           <label class="cont no-mbt">360
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Marker
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">TPath
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <!-- Accordion card 4-->
+
+            <!-- Accordion card 3 -->
+            <div class="accordion md-accordion" id="accordion3" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingThree3">
+                     <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="true"
+                        aria-controls="collapseThree3">
+                        <h5 class="mb-0">
+                           Tile Options
+                        </h5>
+                     </a>
+                  </div>
+                  <!-- Card body -->
+                  <div id="collapseThree3" class="collapse show" role="tabpanel" aria-labelledby="headingThree3"
+                     data-parent="#accordion3">
+                     <div class="card-body">
+                        <div class="form-inline inline-select">
+                           <div class="form-group">
+                              <label for="team-size">Team Size</label>
+
+                              <select class="form-control form-control-sm"">
+                              <option value=" 1"> 256</option>
+                                 <option value="2"> 882</option>
+                                 <option value="3"> 773</option>
+                                 <option value="4">774</option>
+                                 <option value="5">885</option>
+                              </select>
+
+                              <label for="Quality">Quality</label>
+
+                              <select class="form-control form-control-sm">
+                                 <option value="1">100</option>
+                                 <option value="2"> 882</option>
+                                 <option value="3"> 773</option>
+                                 <option value="4">774</option>
+                                 <option value="5">885</option>
+                              </select>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <!-- Accordion card 3 -->
+
+            <!-- Accordion card 4 -->
+            <div class="accordion md-accordion" id="accordion4" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingThree4">
+                     <a data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4" aria-expanded="true"
+                        aria-controls="collapseThree4">
+                        <h5 class="mb-0">
+                           Export
+                        </h5>
+                     </a>
+                  </div>
+                  <!-- Card body -->
+                  <div id="collapseThree4" class="collapse show" role="tabpanel" aria-labelledby="headingThree4"
+                     data-parent="#accordion4">
+                     <div class="card-body">
+
+                        <div class="exportsection">
+                           <div class="input-group">
+                              <label class="folder">Folder</label>
+                              <input class="form-control file-input" />
+                              <button class="import btn" type="button">
+                                 Browse</button>
+                           </div>
+
+                           <div class="form-group">
+                              <label class="cont w-100">Export logs
+                                 <input type="checkbox">
+                                 <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- progress Section -->
+            <div class="progress">
+               <div class="row justify-content-center">
+                  <div class="col-md-4 text">Lorem ipsum dolor sit amet</div>
+                  <div class="col-md-2 progress-text">Progress<br /><span>72%</span></div>
+                  <div class="col-md-5 "> <button class="btn generate">Generate</button></div>
+               </div>
+            </div>
+            <!-- End progress Section -->
+
+
+
+            <!-- Accordion card 4 -->
+         </div>
+         <!-- Accordion wrapper -->
+      </div>
+      <!--End Sidebar Section -->
+
+   </div>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function () {
+         $('#datalisting').DataTable();
+      });
+
+   </script>
+</body>
+
+</html>
