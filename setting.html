@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Setting</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Favicons -->
+   <link href="images/favicon.png" rel="icon">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+   <!-- Css Files -->
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <div class="row mx-0">
+      <!-- =========================
+      Start Left Setting Section 
+      ============================== -->
+
+      <!--Main Section -->
+      <div class="col-md-9 px-0">
+         <div class="main-section">
+            <!--setting Section  -->
+            <div class="d-flex settings ">
+               <div class=" mr-auto">
+                  <img src="images/setting_icon.svg" />
+                  <span>
+                     Setting
+                  </span>
+               </div>
+               <div class="last">
+                  <div class="d-flex">
+                     <p>Last Modified<br>12-03-2012 12:00</p>
+                     <button type="button" class="btn reset">Reset</button>
+                     <button type="button" class="btn-sm btn btn-primary">Save</button>
+                  </div>
+               </div>
+            </div>
+
+            <div class="setting-main">
+
+               <!-- setting end Section -->
+               <div class="directory">
+                  <h6 class="border-radius">General Settings</h6>
+                  <div class="setting-inner-container p-4">
+                     <div class="row">
+                        <div class="col-md-12">
+
+                           <div class="row">
+                              <div class="form-group col-md-4">
+                                 <label>Output Directory</label>
+                                 <input id="uploadFile" class="ml-0 form-control" />
+                              </div>
+                              <div class="form-group col-md-6">
+                                 <button class="btn-sm btn btn-primary">Browser</button>
+                              </div>
+                           </div>
+
+
+                           <div class="row">
+                              <div class="form-group col-md-12">
+                                 <label class="containe setting-label">
+                                    Apply as base Directory for other ouput
+                                    <input type="checkbox">
+                                    <span class="checkmark-3">
+                                    </span>
+                                 </label>
+                              </div>
+                           </div>
+
+
+                           <div class="row">
+                              <div class="form-group col-md-4">
+                                 <label>Output Directory</label>
+                                 <input id="uploadFile" class="ml-0 form-control" />
+                              </div>
+                              <div class="form-group col-md-2">
+                                 <button class="btn-sm btn btn-primary">Browser</button>
+                              </div>
+                              <div class="form-group col-md-4">
+                                 <label>Output Directory</label>
+                                 <input id="uploadFile" class="ml-0 form-control" />
+                              </div>
+                              <div class="form-group col-md-2">
+                                 <button class="btn-sm btn btn-primary">Browser</button>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+                  </div>
+                  <div class="image-quality setting-inner-container p-4">
+
+                     <div class="row">
+                        <div class="col-md-12 form-group">
+                           <div class="form-inline inline-select">
+                              <label>Direction image Quality</label>
+                              <select class="form-control form-control-sm">
+                                 <option value="1"> Hightest</option>
+                                 <option value="2"> Hightest</option>
+                                 <option value="3"> Hightest</option>
+                                 <option value="4">Hightest</option>
+                                 <option value="5">Hightest</option>
+                              </select>
+
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-inline inline-select">
+                              <label>Output Image Format</label>
+
+                              <select class="form-control form-control-sm">
+                                 <option value="1"> 100</option>
+                                 <option value="2"> 882</option>
+                                 <option value="3"> 773</option>
+                                 <option value="4">774</option>
+                                 <option value="5">885</option>
+                              </select>
+
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+
+
+
+                  <h6>Performance Settings</h6>
+
+                  <div class="p-4 performance-setting">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="form-inline input-group">
+                              <label class="">Number of parallel threads</label>
+                              <input type="search" id="" class="form-control number-input" />
+
+                              <label>Max Timeout in minutes</label>
+                              <input type="search" id="form1" class="form-control number-input" />
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row pt-20">
+                        <div class="col-12">
+                           <label class="containe setting-label">
+                              Log performance metrics
+                              <input type="checkbox">
+                              <span class="checkmark-3">
+                              </span>
+                           </label>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+
+      <!-- =========================
+      End Left Setting Section 
+      ============================== -->
+
+      <!-- =============================
+         Sidebar Section 
+      ================================== -->
+      <div class="col-md-3 px-0 right-sidebar">
+         <div class="section-second pt-0">
+            <!-- Start Logo -->
+            <div class="sidebar-header">
+               <div class="logo">
+                  <a href="#">
+                     <img src="images/logo.svg" /><span>KML</span>
+                  </a>
+               </div>
+            </div>
+            <!-- Sibar Nav tabs -->
+            <div class="sidebar-nav">
+               <ul>
+                  <li class="active"><a><img src="images/map-icon.svg" alt="Map" /><span>Map</span></a></li>
+                  <li><a><img src="images/listing-icon.svg" alt="Listing" /><span>Listing</span></a></li>
+                  <li><a><img src="images/export-icon.svg" alt="Data" /><span>Data</span></a>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="source">
+               <h6>Source</h6>
+               <div class="input-group search">
+                  <input class="form-control" />
+
+                  <button type="button" class="btn-sm btn btn-primary">
+                     Import
+                  </button>
+                  <button type="button" class="btn setting">
+                  </button>
+               </div>
+            </div>
+            <!--Start Accordion 1-->
+            <div class="accordion md-accordion" id="accordion1" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <div class="card-header" role="tab" id="headingOne1">
+                     <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1" aria-expanded="true"
+                        aria-controls="collapseOne1">
+                        <h5 class="mb-0">
+                           Capture Directions
+                        </h5>
+                     </a>
+                  </div>
+                  <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                     data-parent="#accordion1">
+                     <div class="card-body">
+
+                        <div class="input-group checkbox-group">
+                           <label class="cont">Front
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont">Back
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont">Panaroma
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Left
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Right
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Start Accordion 2 -->
+            <div class="accordion md-accordion" id="accordion2" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <div class="card-header" role="tab" id="headingTwo2">
+                     <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo2" aria-expanded="true"
+                        aria-controls="collapseTwo2">
+                        <h5 class="mb-0">
+                           KML Output
+                        </h5>
+                     </a>
+                  </div>
+                  <div id="collapseTwo2" class="collapse show" role="tabpanel" aria-labelledby="headingTwo2"
+                     data-parent="#accordion2">
+                     <div class="card-body">
+                        <div class="input-group checkbox-group">
+                           <label class="cont no-mbt">360
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">Marker
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                           <label class="cont no-mbt">TPath
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <!-- Start Accordion card 3 -->
+            <div class="accordion md-accordion" id="accordion3" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <div class="card-header" role="tab" id="headingThree3">
+                     <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree3" aria-expanded="true"
+                        aria-controls="collapseThree3">
+                        <h5 class="mb-0">
+                           Tile Options
+                        </h5>
+                     </a>
+                  </div>
+                  <div id="collapseThree3" class="collapse show" role="tabpanel" aria-labelledby="headingThree3"
+                     data-parent="#accordion3">
+                     <div class="card-body">
+                        <div class="form-inline inline-select">
+                           <div class="form-group">
+                              <label for="team-size">Team Size</label>
+
+                              <select class="form-control form-control-sm"">
+                              <option value=" 1"> 256</option>
+                                 <option value="2"> 882</option>
+                                 <option value="3"> 773</option>
+                                 <option value="4">774</option>
+                                 <option value="5">885</option>
+                              </select>
+
+                              <label for="Quality">Quality</label>
+
+                              <select class="form-control form-control-sm">
+                                 <option value="1">100</option>
+                                 <option value="2"> 882</option>
+                                 <option value="3"> 773</option>
+                                 <option value="4">774</option>
+                                 <option value="5">885</option>
+                              </select>
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+            <!-- Accordion card 4 -->
+            <div class="accordion md-accordion" id="accordion4" role="tablist" aria-multiselectable="true">
+               <div class="card">
+                  <div class="card-header" role="tab" id="headingThree4">
+                     <a data-toggle="collapse" data-parent="#accordion4" href="#collapseThree4" aria-expanded="true"
+                        aria-controls="collapseThree4">
+                        <h5 class="mb-0">
+                           Export
+                        </h5>
+                     </a>
+                  </div>
+                  <div id="collapseThree4" class="collapse show" role="tabpanel" aria-labelledby="headingThree4"
+                     data-parent="#accordion4">
+                     <div class="card-body">
+
+                        <div class="exportsection">
+                           <div class="input-group">
+                              <label class="folder">Folder</label>
+                              <input class="form-control" />
+                              <button class="btn-sm btn btn-primary" type="button">
+                                 Browse</button>
+                           </div>
+                           <div class="form-group">
+                              <label class="cont w-100">Export logs
+                                 <input type="checkbox">
+                                 <span class="checkmark"></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Accordion card 4 -->
+            <div class="progress">
+               <div class="row justify-content-center">
+                  <div class="col-md-4 text">Lorem ipsum dolor sit amet</div>
+                  <div class="col-md-3 progress-text">Progress<br /><span>72%</span></div>
+                  <div class="col-md-5 "><button class="btn btn-primary generate">Generate</button></div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <!-- =============================
+         End Sidebar Section 
+      ================================== -->
+
+   </div>
+   <!-- JS Files -->
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
