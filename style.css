@@ -878,23 +878,24 @@ label.containe.setting-label {
 	border-radius: 14px;
 	padding: 20px 15px;
 }
+.comparison-section{
+	margin-bottom: 20px;
+}
 .comparison-chart{
 	background: #242A30;
 	border-radius: 14px;
-	padding: 20px 15px;
-	height: 285px;
+	padding: 20px 15px 0px 15px;
 }
 .pendingtasks{
 	background: #242A30  url('images/task-icon.png') no-repeat center right 15px;
 	border-radius: 14px;
-	padding: 30px 30px;
+	padding: 34px 30px;
 	margin-bottom: 30px;
 }
 .threadsgtasks{
 	background: #242A30  url('images/total-threads.png') no-repeat center right 15px;
 	border-radius: 14px;
-	padding: 30px 30px;
-	margin-bottom: 30px;
+	padding: 34px 30px;
 }
 
 
