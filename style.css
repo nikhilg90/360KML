@@ -842,138 +842,62 @@ label.containe.setting-label {
 .image-quality {
     border-top: 1px solid #2F363D;
 }
-
-/* ==========================================
-   CUSTOM UTIL CLASSES
-* ========================================== */
-
-/* 
-.collapsible-link {
-	width: 100%;
-	position: relative;
-	text-align: left;
+.lg-process-chat{
+	margin-bottom: 30px;
 }
-.collapsible-link::before {
-	content: '\f0dd';
-	position: absolute;
-	top: 50%;
-	right: 0.8rem;
-	transform: translateY(-50%);
-	display: block;
-	font-family: 'FontAwesome';
-	font-size: 1.1rem;
-}
-.collapsible-link[aria-expanded='true']::before {
-	content: '\f0de';
-}
-.accordion {
-	width: 100%;
-	background-color: unset;
-}
-.accordion>.card>.card-header {
-	background: #2F363D;
-	box-shadow: 18px 4px 35px rgb(0 0 0 / 2%);
-	border-radius: 0px;
-	border-radius: 0;
-	margin-bottom: 0;
-	padding: 4px 19px 12px;
-}
-.accordion>.card {
-	background: #242A30;
-	box-shadow: 0px 5px 4px 4px rgba(35, 35, 35, 0.25);
-}
-.btn-link {
-	padding: 0;
-	font-style: normal;
+.lg-process-chat h3, .comparison-section h3{
+	font-size: 18px;
+	line-height: 27px;
 	font-weight: 500;
-	font-size: 12px;
-	line-height: 18px;
-	color: #FFFFFF;
-	text-decoration: none;
+	margin: 0px;
+	padding: 0px 0px 0px 30px;
 }
-.btn-link:hover,
-.btn-link:focus-visible {
-	color: #FFFFFF;
-	border: 0;
-	text-decoration: none;
+.lg-process-chat .card, .comparison-chart .card{
+	background: none;
+	border: none;
 }
-.btn:focus,.btn:hover, .btn.focus {
-    outline: 0;
-    box-shadow: unset;
+.process-details{
+	padding-top: 65px;
 }
-.btn-link:hover {
-	background-color: unset;
+.process-details p, .pendingtasks p, .threadsgtasks p{
+	color: rgba(255, 255, 255, 0.6);
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0px 5px 0px;
 }
-.fileUpload {
-    position: relative;
-    overflow: hidden;
-  
+.process-details h6, .pendingtasks h6, .threadsgtasks h6{
+	color:#fff;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	margin: 0 0px 15px 0px;
 }
-.fileUpload input.upload {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
+.lg-process-chat{
+	background: #242A30;
+	border-radius: 14px;
+	padding: 20px 15px;
 }
-.custom-select {
-	position: relative;
-	font-family: Arial;
-  }
-  .custom-select select {
-	display: none;
-  }
-  .select-selected {
-	background-color: DodgerBlue;
-  }
-  .select-selected:after {
-	position: absolute;
-	content: "";
-	top: 14px;
-	right: 10px;
-	width: 0;
-	height: 0;
-	border: 6px solid transparent;
-	border-color: #fff transparent transparent transparent;
-  }
-  .select-selected.select-arrow-active:after {
-	border-color: transparent transparent #fff transparent;
-	top: 7px;
-  }
-  .select-items div,.select-selected {
-	color: #ffffff;
-	padding: 8px 16px;
-	border: 1px solid transparent;
-	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-	cursor: pointer;
-	user-select: none;
-  }
-  .select-items {
-	position: absolute;
-	background-color: DodgerBlue;
-	top: 100%;
-	left: 0;
-	right: 0;
-	z-index: 99;
-  }
-  .select-hide {
-	display: none;
-  }
-  .select-items div:hover, .same-as-selected {
-	background-color: rgba(0, 0, 0, 0.1);
-  }
-  .text-left-team label{
-	  padding-left: 31px;
-	  justify-content: initial;
-  }
-  .text-left-team{
-	  margin-bottom: 20px;
-	  margin-top: 20px;
-  }
-  .pb-260{
-	  padding-bottom: 260px;
-  } */
+.comparison-chart{
+	background: #242A30;
+	border-radius: 14px;
+	padding: 20px 15px;
+	height: 285px;
+}
+.pendingtasks{
+	background: #242A30  url('images/task-icon.png') no-repeat center right 15px;
+	border-radius: 14px;
+	padding: 30px 30px;
+	margin-bottom: 30px;
+}
+.threadsgtasks{
+	background: #242A30  url('images/total-threads.png') no-repeat center right 15px;
+	border-radius: 14px;
+	padding: 30px 30px;
+	margin-bottom: 30px;
+}
+
+
+#processchat{
+	height: 295px;
+}
