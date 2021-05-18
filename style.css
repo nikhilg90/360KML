@@ -107,17 +107,36 @@ body{
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 21px;
-	padding: 13px 10px;
+	padding: 50px 10px 13px 10px;
 	color: #FFFFFF;
 	display: block;
 	text-decoration: none;
 	cursor: pointer;
 	border-bottom: 3px solid transparent;
 }
-.sidebar-nav ul li a span{
-	display: block;
-	color: #fff;
-	padding: 5px 0px 0px 0px;
+.sidebar-nav ul li.map a{
+	background: url('images/map-white.svg') no-repeat top 15px center;
+	background-size: 25px;
+}
+.sidebar-nav ul li.listing a{
+	background: url('images/list-white.svg') no-repeat top 15px center;
+	background-size: 25px;
+}
+.sidebar-nav ul li.analytics a{
+	background: url('images/analytics-white.svg') no-repeat top 15px center;
+	background-size: 25px;
+}
+.sidebar-nav ul li.map.active a{
+	background: url('images/map-green.svg') no-repeat top 15px center;
+	background-size: 25px;
+}
+.sidebar-nav ul li.listing.active a{
+	background: url('images/list-green.svg') no-repeat top 15px center;
+	background-size: 25px;
+}
+.sidebar-nav ul li.analytics.active a{
+	background: url('images/analytics-green.svg') no-repeat top 15px center;
+	background-size: 25px;
 }
 .sidebar-nav ul li a:hover, .sidebar-nav ul li.active a {
 	color: #13B497;
@@ -897,8 +916,17 @@ label.containe.setting-label {
 	border-radius: 14px;
 	padding: 34px 30px;
 }
-
-
 #processchat{
 	height: 295px;
+}
+.mapview{
+	width: 100%;
+	height: 100vh;
+}
+.mapiframe{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 75%;
 }
