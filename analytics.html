@@ -16,8 +16,10 @@
    <!-- Bootstrap CSS -->
    <link rel="stylesheet" href="js/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
-
+   <script src="js/chart/chart.min.js"></script>
+   <script src="js/chart/chart.esm.js"></script>
+   <script src="js/chart/3.1.1/chart.js"></script>
+   <script src="js/chart/helpers.esm.min.js"></script>  
 </head>
 
 <body>
@@ -63,7 +65,7 @@
                      <div class="process-chart">
                         <div class="card">
                            <div class="card-body">
-                              <canvas id="chLine"></canvas>
+                              <canvas id="speedChart"></canvas>
                            </div>
                         </div>
                      </div>
@@ -86,25 +88,25 @@
                         <h3>Process Memory(MB)</h3>
                         <div class="card">
                            <div class="card-body">
-                               <canvas id="chBar" height="100"></canvas>
+                              <canvas id="chartBar"></canvas>
                            </div>
-                       </div>
-                     </div>
-
-                     </div>
-                     <div class="col-md-4">
-                        <div class="pendingtasks">
-                           <p>Pending  Task List</p>
-                           <h6>25 Left</h6>
                         </div>
-
-                        <div class="threadsgtasks">
-                           <p>Total Threads</p>
-                           <h6>25</h6>
-                        </div>
-
                      </div>
+
+                  </div>
+                  <div class="col-md-4">
+                     <div class="pendingtasks">
+                        <p>Pending Task List</p>
+                        <h6>25 Left</h6>
                      </div>
+
+                     <div class="threadsgtasks">
+                        <p>Total Threads</p>
+                        <h6>25</h6>
+                     </div>
+
+                  </div>
+               </div>
             </div>
 
 
@@ -130,9 +132,11 @@
             <div class="sidebar-nav">
                <ul>
                   <li class="map">
-                     <a href="map.html">Map</a></li>
+                     <a href="map.html">Map</a>
+                  </li>
                   <li class="listing">
-                     <a href="index.html">Listing</a></li>
+                     <a href="index.html">Listing</a>
+                  </li>
                   <li class="analytics active">
                      <a href="analytics.html">Analytics</a>
                   </li>
@@ -320,98 +324,84 @@
    </div>
    <!-- JS Files -->
    <script>
-    // chart colors
-var colors = ['#68F4D2','#333333','#c3e6cb','#dc3545','#6c757d'];
+      var linechart = document.getElementById('speedChart').getContext('2d');
+      var colors = ['#68F4D2', '#ffffff'];
+      var speedChart = new Chart(linechart, {
+         type: 'line',
+         data: {
+            labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+            datasets: [{
+               label: "Speed (mph)",
+               data: [0, 59, 75, 20, 20, 55, 40],
+               borderColor: colors[0],
+               borderWidth: 4,
+               pointBorderColor: colors[0],
+               pointBackgroundColor: colors[0],
+               pointBorderWidth: 15,
+               fill: false,
+            }]
+         },
+         options: {
+            plugins: {
+               legend: {
+                  display: false,
+                  position: 'top',   
+                  align: 'end',
+                  labels: {
+                     boxWidth: 10,
+                     padding: 10,
+                  }              
+               },
+            }
+         }
+      });
 
-/* large line chart */
-var chLine = document.getElementById("chLine");
-var chartData = {
-  labels: ["0", "100", "200", "400", "600", "800", "1000"],
+      /* Chart 2 */
+      var Barchart = document.getElementById('chartBar').getContext('2d');
+      var barcolors = ['#ffffff', '#22DBBA'];
+      var chBar = new Chart(Barchart, {
+         type: 'bar',
 
-  datasets: [{
-   label: 'Process Memory(MB)',
-    data: [589, 445, 483, 503, 689, 692, 634],
-    backgroundColor: colors[0],
-    borderColor: colors[0],
-    borderWidth: 5,
-    pointBorderColor: colors[0],
-    pointBackgroundColor: colors[0],
-    pointBorderWidth: 15,
-  },
-]
-};
+         data: {
+            labels: ['T0', 'T1', 'T2', 'T3', 'T3', 'T4', 'T5'],
 
-if (chLine) {
-  new Chart(chLine, {
-  type: 'line',
-  data: chartData,
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-    }
-  }
-  });
-}
+            datasets: [{
+               label: 'CPU %',
+               data: [589, 445, 483, 503, 689, 692, 634],
+               backgroundColor: barcolors[0],
+               borderRadius: 100,
+               fontColor: 'white',
+            },
+            {
+               label: 'Memory',
+               data: [209, 245, 383, 403, 589, 692, 580],
+               backgroundColor: barcolors[1],
+               borderRadius: 100,
+               fontColor: 'white',
+            }
+            ]
+         },
+         options: {
+            plugins: {
+               legend: {
+                  display: true,
+                  position: 'top',   
+                  align: 'end',
+                  labelColor: 'white',
+                  labels: {
+                     boxWidth: 10,
+                  },
+                  tooltip:{
+                     labelColor: 'white',
+                  },           
+               },
+            }
+         }
+      });
 
-// chart colors
-var chcolors = ['#ffffff','#22DBBA'];
 
-var chBar = document.getElementById("chBar");
-var chartData = {
-   
-  labels: ["T0", "T1", "T2", "T3", "T3", "T4", "T5"],
-  
-  
-  datasets: [{
-   label: 'CPU %',
-   
-    data: [589, 445, 483, 503, 689, 692, 634],
-    backgroundColor: chcolors[0],
-    borderRadius : 50,
-    borderWidth : 11
-  },
-  {
-    label: 'Memory',
-
-    data: [209, 245, 383, 403, 589, 692, 580],
-    backgroundColor: chcolors[1],
-    borderRadius : 50,
-    borderWidth : 11
-   }
-]
-};
-
-if (chBar) {
-  new Chart(chBar, {
-  type: 'bar',
-  data: chartData,
-  options: {
-    scales: {
-      xAxes: [{
-        barPercentage: 0.4,
-        categoryPercentage: 0.5
-      }],
-      yAxes: [{
-        ticks: {
-          beginAtZero: false
-        }
-      }]
-    },
-    legend: {
-      display: false
-
-   }
-  }
-  });
-}
    </script>
+
    <script type="text/javascript" language="javascript" src="js/jquery-3.5.1.js"></script>
    <script src="js/bootstrap.min.js"></script>
 
