@@ -19,7 +19,7 @@
    <script src="js/chart/chart.min.js"></script>
    <script src="js/chart/chart.esm.js"></script>
    <script src="js/chart/3.1.1/chart.js"></script>
-   <script src="js/chart/helpers.esm.min.js"></script>  
+   <script src="js/chart/helpers.esm.min.js"></script>
 </head>
 
 <body>
@@ -345,12 +345,12 @@
             plugins: {
                legend: {
                   display: false,
-                  position: 'top',   
+                  position: 'top',
                   align: 'end',
                   labels: {
                      boxWidth: 10,
                      padding: 10,
-                  }              
+                  }
                },
             }
          }
@@ -371,6 +371,10 @@
                backgroundColor: barcolors[0],
                borderRadius: 100,
                fontColor: 'white',
+               borderWidth: 3,
+               pointBorderColor: 'transparent',
+               fill:false,
+               barThickness: 18,
             },
             {
                label: 'Memory',
@@ -378,6 +382,11 @@
                backgroundColor: barcolors[1],
                borderRadius: 100,
                fontColor: 'white',
+               borderWidth: 3,
+               pointBorderColor: 'transparent',
+               fill:false,
+               barThickness: 18,
+   
             }
             ]
          },
@@ -385,16 +394,16 @@
             plugins: {
                legend: {
                   display: true,
-                  position: 'top',   
+                  position: 'top',
                   align: 'end',
-                  labelColor: 'white',
+                  borderWidth: 0,
                   labels: {
-                     boxWidth: 10,
-                  },
-                  tooltip:{
-                     labelColor: 'white',
-                  },           
-               },
+                     boxWidth: 9,
+                     color: 'white',
+                     padding: 20,
+                  }
+                  
+               }
             }
          }
       });

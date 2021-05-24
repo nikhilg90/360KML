@@ -949,9 +949,22 @@ label.containe.setting-label {
 	padding: 20px 30px;
 	border-bottom: 1px solid #464B4F;
 	background: #2F363D;
-	border-radius: 14px 14px 0 0;
+	border-radius: 14px;
 	position: relative;
+	cursor: pointer;
  }
+ .datatree .card-header.caret-icon-down {
+	border-radius: 14px 14px 0 0;
+ }
+ .datatree .card-header.caret-icon::before{
+	left: 108px;
+	top: 24px;
+ }
+ .datatree .card-header .numberbubble{
+	top: 19px;
+	right: 61px;
+ }
+ 
  .datatree .card-header i{
 	 position: absolute;
 	 right: 21px;
@@ -993,7 +1006,7 @@ label.containe.setting-label {
 	margin: 0;
 	padding: 0;
  }
- .data-con-item div.numberbubble{
+div.numberbubble{
 	height: 23px;
 	border-radius: 20px;
 	font-size: 12px;
