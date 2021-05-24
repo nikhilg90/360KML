@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-   <title>Time Line</title>
+   <title>Map</title>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Favicons -->
@@ -12,25 +12,206 @@
    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
    <!-- Css Files -->
    <!-- Bootstrap CSS -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
    <link rel="stylesheet" href="js/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
 
-   </head>
-   <body>
-      <div class="row mx-0">
-         <!-- Start Google map -->
-         <div class="col-md-9 px-0">
-            <div class="mapview">
-               <iframe class="mapiframe" src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                  style="border:0" width="100%" height="100%"></iframe>
+   <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: { lat: -28.643387, lng: 153.612224 },
+          mapTypeControl: true,
+          mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.RIGHT_CENTER,
+          },
+          zoomControl: true,
+          zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM,
+          },
+          scaleControl: true,
+          streetViewControl: true,
+          streetViewControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM,
+          },
+          fullscreenControl: true,
+        });
+      }
+    </script>
+</head>
+
+<body>
+   <div class="row mx-0">
+      <!-- Start Google map -->
+      <div class="col-md-9 px-0">
+         <div class="mapview">
+            <div class="datatree">
+               <div class="card">
+                  <div class="card-header caret-icon">
+                     Data List <div class="numberbubble">3</div> <i class="las la-ellipsis-v"></i>
+                  </div>
+                  <div class="tree-container nested-data">
+                     <ul class="list-group parent-menu">
+
+                        <!-- 01- Start Parent Menu-->
+                        <li>
+                           <div class="data-con-item caret-icon">
+                              <h4>Cras justo odio</h4>
+                              <p class="dta-date">12-09-2020</p>
+                              <div class="numberbubble">3</div>
+                           </div>
+                           <!-- Start Sub Menu-->
+                           <ul class="nested-data sub-menu">
+
+                              <li>
+                                 <div class="data-con-item caret-icon">
+                                    <h4>Markers</h4>
+                                    <p class="makers-location">Located in Hyd</p>
+                                    <div class="numberbubble blue-color">2</div>
+                                 </div>
+
+                                 <!-- Start Sub Sub Menu-->
+                                 <ul class="nested-data sub-sub-menu">
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Location #1</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Location #2</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <!-- End Sub Sub Menu-->
+
+
+                              </li>
+
+                              <li>
+                                 <div class="data-con-item caret-icon">
+                                    <h4>360 View Pointers</h4>
+                                    <p class="makers-location">Located in Delhi</p>
+                                    <div class="numberbubble orange-color">2</div>
+                                 </div>
+
+                                 <!-- Start Sub Sub Menu-->
+                                 <ul class="nested-data sub-sub-menu">
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Pointer #1</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <!-- End Sub Sub Menu-->
+
+                              </li>
+                           </ul>
+                           <!-- End Sub Menu-->
+                        </li>
+                        <!-- 01- End Parent Menu-->
+
+
+
+
+                        
+                        <!-- 02- Start Parent Menu-->
+                        <li>
+                           <div class="data-con-item caret-icon">
+                              <h4>City Capture #1</h4>
+                              <p class="dta-date">12-09-2020</p>
+                              <div class="numberbubble">2</div>
+                           </div>
+                           <!-- Start Sub Menu-->
+                           <ul class="nested-data sub-menu">
+
+                              <li>
+                                 <div class="data-con-item caret-icon">
+                                    <h4>Markers</h4>
+                                    <p class="makers-location">Located in Hyd</p>
+                                    <div class="numberbubble blue-color">2</div>
+                                 </div>
+
+                                 <!-- Start Sub Sub Menu-->
+                                 <ul class="nested-data sub-sub-menu">
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Location #1</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Location #2</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <!-- End Sub Sub Menu-->
+
+
+                              </li>
+
+                              <li>
+                                 <div class="data-con-item caret-icon">
+                                    <h4>360 View Pointers</h4>
+                                    <p class="makers-location">Located in Delhi</p>
+                                    <div class="numberbubble orange-color">2</div>
+                                 </div>
+
+                                 <!-- Start Sub Sub Menu-->
+                                 <ul class="nested-data sub-sub-menu">
+                                    <li>
+                                       <div class="data-con-item">
+                                          <i class="las la-map-marker"></i>
+                                          <h4>Pointer #1</h4>
+                                          <p class="makers-location">12.5345,34.42342</p>
+                                          <i class="las la-eye-slash"></i>
+                                       </div>
+                                    </li>
+                                 </ul>
+                                 <!-- End Sub Sub Menu-->
+
+                              </li>
+                           </ul>
+                           <!-- End Sub Menu-->
+                        </li>
+                        <!-- 02- End Parent Menu-->
+
+
+
+                     </ul>
+                  </div>
+               </div>
+
+
             </div>
+            
+               <div id="map"></div>
          </div>
-         <!-- End Google Maps -->
+      </div>
+      <!-- End Google Maps -->
 
 
-         <!-- =============================
+      <!-- =============================
          Sidebar Section 
       ================================== -->
       <div class="col-md-3 px-0 right-sidebar">
@@ -47,9 +228,11 @@
             <div class="sidebar-nav">
                <ul>
                   <li class="map active">
-                     <a href="map.html">Map</a></li>
+                     <a href="map.html">Map</a>
+                  </li>
                   <li class="listing">
-                     <a href="index.html">Listing</a></li>
+                     <a href="index.html">Listing</a>
+                  </li>
                   <li class="analytics">
                      <a href="analytics.html">Analytics</a>
                   </li>
@@ -234,9 +417,26 @@
       <!-- =============================
          End Sidebar Section 
       ================================== -->
-      </div>
-      <!-- JS Files -->
-      <script type="text/javascript" language="javascript" src="js/jquery-3.5.1.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-   </body>
+   </div>
+   <!-- JS Files -->
+   <script>
+      var toggler = document.getElementsByClassName("caret-icon");
+      var i;
+
+      for (i = 0; i < toggler.length; i++) {
+         toggler[i].addEventListener("click", function () {
+            this.parentElement.querySelector(".nested-data").classList.toggle("activedata");
+            this.classList.toggle("caret-icon-down");
+         });
+      }
+   </script>
+   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+   <script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrOu2oaiVViblcgLblN8yY_Cjt-F9fZhU&callback=initMap&libraries=&v=weekly"
+   async
+ ></script>
+   <script type="text/javascript" language="javascript" src="js/jquery-3.5.1.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+</body>
+
 </html>

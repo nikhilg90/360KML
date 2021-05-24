@@ -16,9 +16,33 @@
       href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
    <!-- Css Files -->
    <!-- Bootstrap CSS -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
    <link rel="stylesheet" href="js/bootstrap.min.css">
    <link rel="stylesheet" href="style.css">
 
+   <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: { lat: -28.643387, lng: 153.612224 },
+          mapTypeControl: true,
+          mapTypeControlOptions: {
+            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            position: google.maps.ControlPosition.RIGHT_CENTER,
+          },
+          zoomControl: true,
+          zoomControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM,
+          },
+          scaleControl: true,
+          streetViewControl: true,
+          streetViewControlOptions: {
+            position: google.maps.ControlPosition.RIGHT_BOTTOM,
+          },
+          fullscreenControl: true,
+        });
+      }
+    </script>
 </head>
 
 <body>
@@ -180,8 +204,8 @@
 
 
             </div>
-            <iframe class="mapiframe" src="https://maps.google.com/maps?q=chicago&t=&z=13&ie=UTF8&iwloc=&output=embed"
-               frameborder="0" style="border:0" width="100%" height="100%"></iframe>
+            
+               <div id="map"></div>
          </div>
       </div>
       <!-- End Google Maps -->
@@ -406,6 +430,11 @@
          });
       }
    </script>
+   <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+   <script
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrOu2oaiVViblcgLblN8yY_Cjt-F9fZhU&callback=initMap&libraries=&v=weekly"
+   async
+ ></script>
    <script type="text/javascript" language="javascript" src="js/jquery-3.5.1.js"></script>
    <script src="js/bootstrap.min.js"></script>
 </body>

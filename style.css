@@ -6,6 +6,7 @@ body{
 	background: #2A2F34;
 	font-weight: 400;
 	font-family: 'Poppins', sans-serif;
+	height: 100%;
 }
 .form-control{
 	background: #1C2126;
@@ -871,6 +872,12 @@ label.containe.setting-label {
 	margin: 0px;
 	padding: 0px 0px 0px 30px;
 }
+.process-chart canvas{
+	max-height: 260px;
+}
+.comparison-chart canvas{
+	max-height: 240px;
+}
 .lg-process-chat .card, .comparison-chart .card{
 	background: none;
 	border: none;
@@ -908,13 +915,13 @@ label.containe.setting-label {
 .pendingtasks{
 	background: #242A30  url('images/task-icon.png') no-repeat center right 15px;
 	border-radius: 14px;
-	padding: 34px 30px;
+	padding: 40px 30px;
 	margin-bottom: 30px;
 }
 .threadsgtasks{
 	background: #242A30  url('images/total-threads.png') no-repeat center right 15px;
 	border-radius: 14px;
-	padding: 34px 30px;
+	padding: 40px 30px;
 }
 #processchat{
 	height: 295px;
@@ -923,8 +930,8 @@ label.containe.setting-label {
 	width: 100%;
 	height: 100vh;
 }
-.mapiframe{
-	position: fixed;
+.mapiframe, #map{
+	position: fixed !important;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -932,7 +939,7 @@ label.containe.setting-label {
 }
 .datatree {
 	width: 310px;
-	position: absolute;
+	position: fixed;
 	left: 40px;
 	top: 40px;
 	z-index: 99;
