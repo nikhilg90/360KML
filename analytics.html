@@ -334,11 +334,14 @@
                label: "Speed (mph)",
                data: [0, 59, 75, 20, 20, 55, 40],
                borderColor: colors[0],
-               borderWidth: 4,
+               borderWidth: 5,
                pointBorderColor: colors[0],
                pointBackgroundColor: colors[0],
-               pointBorderWidth: 15,
+               pointBorderWidth: 10,
+               pointHoverRadius: 10,
+               pointHoverBorderWidth: 1,
                fill: false,
+               lineTension: 0.6,
             }]
          },
          options: {
@@ -347,12 +350,23 @@
                   display: false,
                   position: 'top',
                   align: 'end',
+                  borderWidth: 0,
                   labels: {
-                     boxWidth: 10,
-                     padding: 10,
+                     boxWidth: 9,
+                     color: 'white',
+                     padding: 20,
                   }
                },
-            }
+               tooltip: {
+                  enabled: true,
+                  boxWidth: 10,
+                  boxHeight: 0,
+                  borderWidth:0,
+                  displayColors: false,
+               },
+               
+            },
+           
          }
       });
 
