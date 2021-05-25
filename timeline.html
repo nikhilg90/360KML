@@ -21,26 +21,111 @@
    <link rel="stylesheet" href="style.css">
 
    <script>
+      let map;
+
       function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 12,
-          center: { lat: -28.643387, lng: 153.612224 },
-          mapTypeControl: true,
-          mapTypeControlOptions: {
-            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-            position: google.maps.ControlPosition.RIGHT_CENTER,
-          },
-          zoomControl: true,
-          zoomControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_BOTTOM,
-          },
-          scaleControl: true,
-          streetViewControl: true,
-          streetViewControlOptions: {
-            position: google.maps.ControlPosition.RIGHT_BOTTOM,
-          },
-          fullscreenControl: true,
+        map = new google.maps.Map(document.querySelector("#map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+          disableDefaultUI: true,
         });
+        initZoomControl(map);
+        initMapTypeControl(map);
+        initFullscreenControl(map);
+      }
+
+      function initZoomControl(map) {
+        document.querySelector(".zoom-control-in").onclick = function () {
+          map.setZoom(map.getZoom() + 1);
+        };
+
+        document.querySelector(".zoom-control-out").onclick = function () {
+          map.setZoom(map.getZoom() - 1);
+        };
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(
+          document.querySelector(".zoom-control")
+        );
+      }
+
+      function initMapTypeControl(map) {
+        const mapTypeControlDiv = document.querySelector(".maptype-control");
+
+        document.querySelector(".maptype-control-map").onclick = function () {
+          mapTypeControlDiv.classList.add("maptype-control-is-map");
+          mapTypeControlDiv.classList.remove("maptype-control-is-satellite");
+          map.setMapTypeId("roadmap");
+        };
+
+        document.querySelector(".maptype-control-satellite").onclick =
+          function () {
+            mapTypeControlDiv.classList.remove("maptype-control-is-map");
+            mapTypeControlDiv.classList.add("maptype-control-is-satellite");
+            map.setMapTypeId("hybrid");
+          };
+        map.controls[google.maps.ControlPosition.LEFT_TOP].push(
+          mapTypeControlDiv
+        );
+      }
+
+      function initFullscreenControl(map) {
+        const elementToSendFullscreen = map.getDiv().firstChild;
+        const fullscreenControl = document.querySelector(".fullscreen-control");
+        map.controls[google.maps.ControlPosition.RIGHT_TOP].push(
+          fullscreenControl
+        );
+
+        fullscreenControl.onclick = function () {
+          if (isFullscreen(elementToSendFullscreen)) {
+            exitFullscreen();
+          } else {
+            requestFullscreen(elementToSendFullscreen);
+          }
+        };
+
+        document.onwebkitfullscreenchange =
+          document.onmsfullscreenchange =
+          document.onmozfullscreenchange =
+          document.onfullscreenchange =
+            function () {
+              if (isFullscreen(elementToSendFullscreen)) {
+                fullscreenControl.classList.add("is-fullscreen");
+              } else {
+                fullscreenControl.classList.remove("is-fullscreen");
+              }
+            };
+      }
+
+      function isFullscreen(element) {
+        return (
+          (document.fullscreenElement ||
+            document.webkitFullscreenElement ||
+            document.mozFullScreenElement ||
+            document.msFullscreenElement) == element
+        );
+      }
+
+      function requestFullscreen(element) {
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.webkitRequestFullScreen) {
+          element.webkitRequestFullScreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.msRequestFullScreen) {
+          element.msRequestFullScreen();
+        }
+      }
+
+      function exitFullscreen() {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
       }
     </script>
 </head>
@@ -205,7 +290,46 @@
 
             </div>
             
-               <div id="map"></div>
+               
+    <div id="map"></div>
+    <!-- Hide controls until they are moved into the map. -->
+    <div class="mapicons-set">
+       <button class="map-markers-icon"><i class="las la-map-marker"></i></button>
+       <button class="map-path-icon"><img src="images/path-icon.svg"></button>
+       <button class="map-360-icon"><img src="images/view360-icon.svg"></button>
+    </div>
+    <div style="display: none">
+      <div class="controls zoom-control">
+        <button class="zoom-control-in" title="Zoom In"><i class="las la-search-plus"></i></button>
+        <button class="zoom-control-out" title="Zoom Out"><i class="las la-search-minus"></i></button>
+      </div>
+      <div class="controls maptype-control maptype-control-is-map">
+        <button class="maptype-control-map" title="Show road map">Map</button>
+        <button
+          class="maptype-control-satellite"
+          title="Show satellite imagery"
+        >
+          Satellite
+        </button>
+      </div>
+      <div class="controls fullscreen-control">
+        <button title="Toggle Fullscreen">
+          <div
+            class="fullscreen-control-icon fullscreen-control-top-left"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-top-right"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-bottom-left"
+          ></div>
+          <div
+            class="fullscreen-control-icon fullscreen-control-bottom-right"
+          ></div>
+        </button>
+      </div>
+    </div>
+    
          </div>
       </div>
       <!-- End Google Maps -->
